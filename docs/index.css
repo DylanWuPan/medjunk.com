@@ -11,6 +11,7 @@
   --transition: 0.25s ease-in-out;
   --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   --box-shadow-light: 0 4px 20px rgba(0, 0, 0, 0.2);
+  --box-shadow-heavy: 0 6px 30px rgba(0, 0, 0, 0.8);
 }
 
 * {
@@ -108,6 +109,7 @@ main p {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  box-shadow: var(--box-shadow);
 }
 
 .mission {
@@ -187,17 +189,18 @@ main p {
 }
 
 /* ===== Hours ===== */
-.hours {
+.hours,
+.giving-back {
   width: 100%;
   padding: 4rem;
-  box-shadow: var(--box-shadow);
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-.hours div {
+.hours div,
+.giving-back div {
   background-color: var(--accent-2);
   padding: 2rem 3rem;
   border-radius: var(--radius);
@@ -221,28 +224,210 @@ main p {
   margin-top: 1rem;
 }
 
-.hours img {
+.hours img,
+.giving-back img {
   max-width: 65vw;
   border-radius: var(--radius);
   box-shadow: var(--box-shadow-light);
 }
 
-.hours h2 {
+.hours h2,
+.giving-back h2 {
   margin-bottom: 1rem;
   text-align: center;
 }
 
-.hours ul {
+.hours ul,
+.giving-back ul {
   list-style: none;
 }
 
-.hours li {
+.hours li,
+.giving-back li {
   margin-bottom: 1rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+}
+
+.giving-back {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#giving-back-info {
+  margin-top: -10rem;
+  z-index: 10;
+  max-width: 50vw;
+}
+
+/* ===== Free Quote ===== */
+.quote-container {
+  background: var(--accent-2);
+  border-radius: var(--radius);
+  box-shadow: var(--box-shadow-heavy);
+  border: 4px solid black;
+  padding: 2rem;
+  max-width: 75vw;
+  margin: 0 auto;
+}
+
+.quote-title {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.quote-container p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.quote-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  padding: 2rem;
+}
+
+/* Left Side */
+.quote-info img {
+  width: 100%;
+  border-radius: var();
+  margin-bottom: 1rem;
+}
+
+.quote-info p {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.quote-info a {
+  color: #222;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.quote-note {
+  background: #c3e9d0;
+  padding: 1rem 0.2rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Right Side (Form) */
+.quote-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--accent);
+  padding: 3rem;
+  border-radius: var(--radius);
+  box-shadow: var(--box-shadow);
+}
+
+.quote-form label {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.quote-form input,
+.quote-form textarea,
+.quote-form select {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: none;
+  background: #f7f5f4;
+  font-size: 0.95rem;
+}
+
+.quote-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.quote-form button {
+  background: #d62828;
+  color: white;
+  padding: 0.9rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.quote-form button:hover {
+  background: #a51d1d;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .quote-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  text-align: center;
+  background-color: white;
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--box-shadow);
+  margin-right: -2rem;
+  z-index: 10;
+  min-width: 20vw;
+}
+.contact-info h2 {
+  font-size: 2rem;
+  color: var(--text-dark);
+  text-align: center;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: left;
+  align-items: flex-start;
+  padding: 1.5rem;
+}
+
+.contact-info li {
+  font-size: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.contact-info a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.contact-info img {
+  max-width: 2.5rem;
 }
 
 /* ===== Footer ===== */
