@@ -4,24 +4,38 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Medfield Junk</title>
-    <link rel="icon" href="assets/logo.png" type="image/x-icon" />
+    <link rel="icon" href="assets/icons/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="index.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
-      <a href="index.html">
-        <h1>Medfield Junk</h1>
-      </a>
-      <a href="index.html">
-        <img src="assets/logo.png" alt="Medfield Junk Logo" class="logo" />
-      </a>
+      <div id="header-logos">
+        <a href="index.html">
+          <h1>Medfield Junk</h1>
+        </a>
+        <a href="index.html">
+          <img
+            src="assets/icons/logo.png"
+            alt="Medfield Junk Logo"
+            class="logo"
+          />
+        </a>
+      </div>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="ourcrew.html">Our Crew</a></li>
-          <li><a href="contact.html">Free Quote!</a></li>
+          <li><a href="#contact-section" id="free-quote">Free Quote!</a></li>
         </ul>
       </nav>
+      <button class="hamburger" aria-label="Toggle menu">☰</button>
     </header>
 
     <div class="landing-page">
@@ -35,35 +49,57 @@
         </p>
         <div class="buttons">
           <button onclick="window.location.href='ourcrew.html'">
-            Meet the Team!
+            Meet Our Crew
           </button>
-          <button onclick="window.location.href='contact.html'">
-            Get a Free Quote!
-          </button>
+          <button>Recieve a Free Quote</button>
         </div>
+      </div>
+      <div id="landing-images">
+        <img
+          src="assets/giving-back.png"
+          alt="Junk Removal"
+          class="landing-image"
+          id="landing-image-1"
+        />
+        <img
+          src="assets/hours.jpg"
+          alt="Junk Removal"
+          class="landing-image"
+          id="landing-image-2"
+        />
       </div>
       <a href="#content" class="scroll-down"> &#x25BC; </a>
     </div>
+
     <main id="content">
-      <div class="hours">
-        <div id="hours-info">
-          <h2>Hours</h2>
-          <ul>
-            <li>
-              <h4>During School Year:</h4>
-              <p>Weekends and Breaks</p>
-            </li>
-            <li>
-              <h4>Summer:</h4>
-              <p>Weekdays and Weekends</p>
-            </li>
-          </ul>
-        </div>
+      <div class="hours-service-section">
         <img src="assets/hours.jpg" alt="Hours" />
-        <div id="service-info">
-          <h2>Service Areas</h2>
-          <p>Eastern & Southern Massachusetts</p>
-          <h4>Reach out and we will let you know if we can help!</h4>
+        <div class="hours-service-info">
+          <div id="hours-info">
+            <h2>Hours</h2>
+            <ul>
+              <li>
+                <h4>During School Year:</h4>
+                <p>Weekends and Breaks</p>
+              </li>
+              <li>
+                <h4>Summer:</h4>
+                <p>Weekdays and Weekends</p>
+              </li>
+            </ul>
+          </div>
+          <div id="service-info">
+            <h2>Service Areas</h2>
+
+            <ul>
+              <li>
+                <p>Eastern & Southern Massachusetts</p>
+              </li>
+              <li>
+                <h4>Reach out and we will let you know if we can help!</h4>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="giving-back">
@@ -81,122 +117,79 @@
           </p>
         </div>
       </div>
-      <div class="quote-container">
-        <h1 class="quote-title">Get a FREE QUOTE!</h1>
-        <p>
-          Fill out the form to request a quote and we will get back to you in
-          under 60 minutes to schedule a date and time for your in-person quote.
-        </p>
-        <div class="quote-note">
-          If you have items to be donated, please separate them from any junk.
-          We’re able to donate anything that our donation partners will accept.
+      <div id="contact-section">
+        <div class="contact-info">
+          <h2>Contact Us!</h2>
+          <ul>
+            <li>
+              <a href="tel:7746880012">
+                <img
+                  src="assets/icons/phone-icon.jpg"
+                  alt="Phone Icon"
+                  class="icon"
+                />
+                <span>774-688-0012</span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:medfieldjunk@gmail.com">
+                <img
+                  src="assets/icons/email-icon.jpg"
+                  alt="Email Icon"
+                  class="icon"
+                />
+                <span>medfieldjunk@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/medfield_junk/"
+                target="_blank"
+              >
+                <img
+                  src="assets/icons/instagram-icon.png"
+                  alt="Instagram Icon"
+                  class="icon"
+                />
+                <span>@medfield_junk</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.tiktok.com/@medfieldjunk" target="_blank">
+                <img
+                  src="assets/icons/tiktok-icon.png"
+                  alt="TikTok Icon"
+                  class="icon"
+                />
+                <span>@medfieldjunk</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/groups/1600551710187257/posts/3987795331462871/"
+                target="_blank"
+              >
+                <img
+                  src="assets/icons/facebook-icon.png"
+                  alt="Facebook Icon"
+                  class="icon"
+                />
+                <span>@medfieldjunk</span>
+              </a>
+            </li>
+          </ul>
         </div>
-        <div class="quote-grid">
-          <div class="contact-info">
-            <h2>Contact Us!</h2>
-            <ul>
-              <li>
-                <a href="tel:7746880012">
-                  <img
-                    src="assets/phone-icon.jpg"
-                    alt="Phone Icon"
-                    class="icon"
-                  />
-                  <span>774-688-0012</span>
-                </a>
-              </li>
-              <li>
-                <a href="mailto:medfieldjunk@gmail.com">
-                  <img
-                    src="assets/email-icon.jpg"
-                    alt="Email Icon"
-                    class="icon"
-                  />
-                  <span>medfieldjunk@gmail.com</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.instagram.com/medfield_junk/"
-                  target="_blank"
-                >
-                  <img
-                    src="assets/instagram-icon.png"
-                    alt="Instagram Icon"
-                    class="icon"
-                  />
-                  <span>@medfield_junk</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.tiktok.com/@medfieldjunk" target="_blank">
-                  <img
-                    src="assets/tiktok-icon.png"
-                    alt="TikTok Icon"
-                    class="icon"
-                  />
-                  <span>@medfieldjunk</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.facebook.com/groups/1600551710187257/posts/3987795331462871/"
-                  target="_blank"
-                >
-                  <img
-                    src="assets/facebook-icon.png"
-                    alt="Facebook Icon"
-                    class="icon"
-                  />
-                  <span>@medfieldjunk</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <form class="quote-form">
-            <div>
+        <form class="quote-form">
+          <h2 class="quote-title">Free Quote!</h2>
+
+          <p>Fill out the form below to request a quote.</p>
+
+          <div class="form-row">
+            <div class="form-field">
               <label for="name">Full name *</label>
               <input type="text" id="name" placeholder="John Doe" required />
             </div>
-            <div>
-              <label for="phone">Phone Number *</label>
-              <input
-                type="tel"
-                id="phone"
-                placeholder="000-000-0000"
-                required
-              />
-            </div>
-            <div>
-              <label for="email">Email Address *</label>
-              <input
-                type="email"
-                id="email"
-                placeholder="johndoe@gmail.com"
-                required
-              />
-            </div>
-            <div>
-              <label for="address">Address *</label>
-              <input
-                type="text"
-                id="address"
-                placeholder="123 Fake St, MA, 34567"
-                required
-              />
-            </div>
-            <div>
-              <label for="zipcode">Zip Code *</label>
-              <input type="text" id="zipcode" placeholder="02062" required />
-            </div>
-            <div>
-              <label for="pickup">What would you like us to pick up?</label>
-              <textarea
-                id="pickup"
-                placeholder="Household items, construction debris..."
-              ></textarea>
-            </div>
-            <div>
+            <div class="form-field">
               <label for="hear">How did you hear about us?</label>
               <select id="hear">
                 <option value="">Select an option</option>
@@ -206,14 +199,73 @@
                 <option value="social">Social Media</option>
               </select>
             </div>
-            <button type="submit">Submit</button>
-          </form>
-        </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="phone">Phone Number *</label>
+              <input
+                type="tel"
+                id="phone"
+                placeholder="000-000-0000"
+                required
+              />
+            </div>
+            <div class="form-field">
+              <label for="email">Email Address *</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="johndoe@gmail.com"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="address">Address *</label>
+              <input
+                type="text"
+                id="address"
+                placeholder="123 Fake St, Medfield"
+                required
+              />
+            </div>
+            <div id="zipcode-field" class="form-field">
+              <label for="zipcode">Zip Code *</label>
+              <input type="text" id="zipcode" placeholder="02062" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="pickup">What would you like us to pick up?</label>
+              <textarea
+                id="pickup"
+                placeholder="Household items, construction debris..."
+              ></textarea>
+            </div>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
       </div>
     </main>
 
     <footer>
-      <p>&copy; 2025 Medfield Junk. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="instagram.com/medfield_junk" target="_blank"
+          ><img src="assets/icons/instagram-icon.png" alt="Instagram Icon"
+        /></a>
+        <a href="tiktok.com/@medfieldjunk" target="_blank"
+          ><img src="assets/icons/tiktok-icon.png" alt="TikTok Icon"
+        /></a>
+        <a
+          href="facebook.com/groups/1600551710187257/posts/3987795331462871/"
+          target="_blank"
+          ><img src="assets/icons/facebook-icon.png" alt="Facebook Icon"
+        /></a>
+      </div>
+      <p>774-688-0012 | medfieldjunk@gmail.com</p>
+      <p class="copyright">&copy; 2025 Medfield Junk. All rights reserved.</p>
     </footer>
+    <script src="index.js" defer></script>
   </body>
 </html>
