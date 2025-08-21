@@ -1,7 +1,7 @@
 /* ===== Base Styles ===== */
 :root {
   --accent: #70cba8;
-  --accent-dark: #0fa76d;
+  --accent-dark: rgb(19, 119, 88);
   --accent-2: #e1dfe0;
   --bg: white;
   --text-dark: #222;
@@ -21,6 +21,22 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: 20vh;
+}
+
+body.fade-out {
+  opacity: 0;
+}
+
+body.fade-in {
+  opacity: 1;
+}
+
 body {
   /* font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; */
   font-family: "Sansation", sans-serif;
@@ -28,6 +44,8 @@ body {
   color: var(--text-dark);
   line-height: 1.6;
   padding: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
 /* ===== Header ===== */
@@ -95,7 +113,7 @@ nav a:hover {
 }
 
 #free-quote {
-  background: var(--accent);
+  background: var(--accent-dark);
   color: white;
   padding: 1vh 2vw;
   border-radius: var(--radius);
@@ -104,7 +122,7 @@ nav a:hover {
 }
 
 #free-quote:hover {
-  background: var(--accent-dark);
+  background: var(--accent);
 }
 
 /* ===== Main Content ===== */
@@ -145,52 +163,54 @@ main p {
 }
 
 .mission {
-  width: 70vw;
+  max-height: 30vh;
+  max-width: 50vw;
   border-radius: var(--radius);
   padding: var(--padding);
   box-shadow: var(--box-shadow-heavy);
   margin: auto;
   z-index: 10;
-  background: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(8px);
-}
-
-.mission h1 {
-  color: var(--accent);
-  margin-bottom: 1rem;
-  text-align: center;
-  font-size: 4rem;
+  /* background: rgb(19, 119, 88, 0.5); */
+  background: rgba(255, 215, 0, 0.5);
+  backdrop-filter: blur(20px);
+  position: relative;
+  top: 4vh;
 }
 
 .mission p {
-  color: var(--text-dark);
+  color: black;
   text-align: center;
   font-size: 1.2rem;
+  font-weight: bold;
 }
 
-.buttons {
+.landing-buttons {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 1.5rem;
   gap: 1rem;
+  position: absolute;
+  bottom: 5vh;
 }
 
-.mission button {
-  background: white;
-  color: var(--accent);
+.landing-buttons button {
+  background: rgba(19, 119, 88, 0.6);
+  color: white;
   border: none;
-  padding: 0.8rem 1.5rem;
+  padding: 2vh 2vw;
   border-radius: var(--radius);
   font-size: 1.1rem;
   cursor: pointer;
   transition: background-color var(--transition), color var(--transition);
   display: block;
   box-shadow: var(--box-shadow);
+  backdrop-filter: blur(10px);
+  font-weight: bold;
+  font-style: italic;
 }
 
-.mission button:hover {
+.landing-buttons button:hover {
   background: var(--accent);
   color: white;
 }
@@ -205,7 +225,7 @@ main p {
 }
 
 .landing-image {
-  height: 30vh;
+  height: 35vh;
   border-radius: var(--radius);
   box-shadow: var(--box-shadow-light);
   position: absolute;
@@ -213,25 +233,34 @@ main p {
 }
 
 #landing-image-1 {
-  left: 22%;
-  top: 20%;
+  left: 28%;
+  top: 32%;
   transform: rotate(-10deg) translateX(-50%) translateY(-50%);
   z-index: 1;
+  opacity: 0.7;
 }
 
 #landing-image-2 {
-  left: 70%;
-  top: 30%;
+  left: 64%;
+  top: 42%;
   transform: rotate(10deg) translateX(-50%) translateY(-50%);
+  opacity: 0.7;
+}
+
+#landing-image-3 {
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  height: 83vh;
+  z-index: 10;
+  opacity: 0.95;
 }
 
 .scroll-down {
-  position: relative;
-  font-size: 2rem;
-  color: black;
+  font-size: 4vh;
+  color: var(--accent);
   text-decoration: none;
   animation: bounce 1.5s infinite;
-  bottom: 8vh;
 }
 
 /* Arrow bounce animation */
@@ -244,10 +273,10 @@ main p {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(6px);
+    transform: translateY(5vh);
   }
   60% {
-    transform: translateY(3px);
+    transform: translateY(2.5vh);
   }
 }
 
@@ -426,6 +455,10 @@ main p {
 .quote-form textarea {
   resize: vertical;
   min-height: 80px;
+}
+
+#zipcode-field {
+  width: fit-content;
 }
 
 .quote-form button {
@@ -609,6 +642,21 @@ footer {
 }
 
 @media (max-width: 900px) {
+  #landing-image-1,
+  #landing-image-2 {
+    display: none;
+  }
+
+  #landing-image-3 {
+    height: 90vh;
+  }
+
+  .mission {
+    width: 95vw;
+    max-height: none;
+    max-width: none;
+  }
+
   .hours-service-section img,
   .giving-back img {
     max-width: 95vw;

@@ -40,19 +40,12 @@
 
     <div class="landing-page">
       <div class="mission">
-        <h1>Medfield Junk</h1>
         <p>
           We are a group of dedicated Medfield High School and Roxbury Latin
           Students. Through our business, we help local families by easing the
           stress of removing furniture, waste, and more — while giving back to
           our community through donations and drives.
         </p>
-        <div class="buttons">
-          <button onclick="window.location.href='ourcrew.html'">
-            Meet Our Crew
-          </button>
-          <button>Recieve a Free Quote</button>
-        </div>
       </div>
       <div id="landing-images">
         <img
@@ -67,8 +60,23 @@
           class="landing-image"
           id="landing-image-2"
         />
+        <img
+          src="assets/poster.jpg"
+          class="landing-image"
+          id="landing-image-3"
+        />
       </div>
-      <a href="#content" class="scroll-down"> &#x25BC; </a>
+      <div class="landing-buttons">
+        <button onclick="window.location.href='ourcrew.html'">
+          Meet Our Crew
+        </button>
+        <a href="#content" class="scroll-down"> &#x25BC; </a>
+        <button
+          onclick="document.getElementById('contact-section').scrollIntoView({ behavior: 'smooth' });"
+        >
+          Claim Free Quote
+        </button>
+      </div>
     </div>
 
     <main id="content">
@@ -165,6 +173,16 @@
               </a>
             </li>
             <li>
+              <a href="https://www.youtube.com/@medfieldjunk" target="_blank"
+                ><img
+                  src="assets/icons/youtube-icon.png"
+                  alt="YouTube Icon"
+                  class="icon"
+                />
+                <span>@MedfieldJunk</span></a
+              >
+            </li>
+            <li>
               <a
                 href="https://www.facebook.com/groups/1600551710187257/posts/3987795331462871/"
                 target="_blank"
@@ -251,21 +269,36 @@
 
     <footer>
       <div class="footer-links">
-        <a href="instagram.com/medfield_junk" target="_blank"
-          ><img src="assets/icons/instagram-icon.png" alt="Instagram Icon"
-        /></a>
-        <a href="tiktok.com/@medfieldjunk" target="_blank"
-          ><img src="assets/icons/tiktok-icon.png" alt="TikTok Icon"
-        /></a>
+        <a href="https://instagram.com/medfield_junk" target="_blank">
+          <img src="assets/icons/instagram-icon.png" alt="Instagram Icon" />
+        </a>
+        <a href="https://www.tiktok.com/@medfieldjunk" target="_blank">
+          <img src="assets/icons/tiktok-icon.png" alt="TikTok Icon" />
+        </a>
+        <a href="https://www.youtube.com/@medfieldjunk" target="_blank">
+          <img src="assets/icons/youtube-icon.png" alt="YouTube Icon" />
+        </a>
         <a
-          href="facebook.com/groups/1600551710187257/posts/3987795331462871/"
+          href="https://www.facebook.com/groups/1600551710187257/posts/3987795331462871/"
           target="_blank"
-          ><img src="assets/icons/facebook-icon.png" alt="Facebook Icon"
-        /></a>
+        >
+          <img src="assets/icons/facebook-icon.png" alt="Facebook Icon" />
+        </a>
       </div>
       <p>774-688-0012 | medfieldjunk@gmail.com</p>
       <p class="copyright">&copy; 2025 Medfield Junk. All rights reserved.</p>
     </footer>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "X0DzPHhkSgucSRAcz",
+        });
+      })();
+    </script>
     <script src="index.js" defer></script>
   </body>
 </html>
