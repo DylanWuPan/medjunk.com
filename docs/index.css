@@ -258,7 +258,7 @@ main p {
 
 .scroll-down {
   font-size: 4vh;
-  color: var(--accent);
+  color: rgb(255, 215, 0);
   text-decoration: none;
   animation: bounce 1.5s infinite;
 }
