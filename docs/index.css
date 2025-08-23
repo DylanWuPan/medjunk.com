@@ -195,7 +195,7 @@ main p {
 }
 
 .landing-buttons button {
-  background: rgba(19, 119, 88, 0.6);
+  background: rgba(19, 119, 88, 0.8);
   color: white;
   border: none;
   padding: 2vh 2vw;
@@ -233,18 +233,49 @@ main p {
 }
 
 #landing-image-1 {
-  left: 28%;
+  position: absolute;
   top: 32%;
-  transform: rotate(-10deg) translateX(-50%) translateY(-50%);
+  left: 50%; /* start centered */
+  transform: rotate(0deg) translateX(-50%) translateY(-50%);
   z-index: 1;
-  opacity: 0.7;
+  opacity: 0;
+  animation: fanOut1 1.5s ease-out forwards;
 }
 
 #landing-image-2 {
-  left: 64%;
+  position: absolute;
   top: 42%;
-  transform: rotate(10deg) translateX(-50%) translateY(-50%);
-  opacity: 0.7;
+  left: 50%; /* start centered */
+  transform: rotate(0deg) translateX(-50%) translateY(-50%);
+  opacity: 0;
+  animation: fanOut2 1.5s ease-out forwards;
+  animation-delay: 0.2s; /* stagger */
+}
+
+@keyframes fanOut1 {
+  from {
+    left: 50%;
+    transform: rotate(0deg) translateX(-50%) translateY(-50%);
+    opacity: 0;
+  }
+  to {
+    left: 28%;
+    transform: rotate(-10deg) translateX(-50%) translateY(-50%);
+    opacity: 0.8;
+  }
+}
+
+@keyframes fanOut2 {
+  from {
+    left: 50%;
+    transform: rotate(0deg) translateX(-50%) translateY(-50%);
+    opacity: 0;
+  }
+  to {
+    left: 64%;
+    transform: rotate(10deg) translateX(-50%) translateY(-50%);
+    opacity: 0.8;
+  }
 }
 
 #landing-image-3 {
@@ -253,7 +284,7 @@ main p {
   transform: translateX(-50%) translateY(-50%);
   height: 83vh;
   z-index: 10;
-  opacity: 0.95;
+  opacity: 1;
 }
 
 .scroll-down {
