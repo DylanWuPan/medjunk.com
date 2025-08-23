@@ -240,6 +240,7 @@ main p {
   z-index: 1;
   opacity: 0;
   animation: fanOut1 1.5s ease-out forwards;
+  animation-delay: 1s;
 }
 
 #landing-image-2 {
@@ -249,7 +250,7 @@ main p {
   transform: rotate(0deg) translateX(-50%) translateY(-50%);
   opacity: 0;
   animation: fanOut2 1.5s ease-out forwards;
-  animation-delay: 0.2s; /* stagger */
+  animation-delay: 1.5s;
 }
 
 @keyframes fanOut1 {
