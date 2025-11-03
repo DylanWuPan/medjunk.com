@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
         EMAILJS_USER_ID
       );
 
-      console.log(formData);
+      // console.log(formData);
 
       alert("Quote request sent successfully!");
       quoteForm.reset();
