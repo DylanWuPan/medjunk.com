@@ -81,7 +81,7 @@ header h1 {
 .logo {
   height: 10vh;
   width: auto;
-  border-radius: var(--radius);
+  border-radius: 50%;
   box-shadow: var(--box-shadow-heavy);
   position: absolute;
   top: 3vh;
