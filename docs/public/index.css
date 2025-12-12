@@ -113,7 +113,7 @@ nav a:hover {
 }
 
 #free-quote {
-  background: var(--accent-dark);
+  background: var(--accent);
   color: white;
   padding: 1vh 2vw;
   border-radius: var(--radius);
@@ -122,7 +122,7 @@ nav a:hover {
 }
 
 #free-quote:hover {
-  background: var(--accent);
+  background: var(--accent-dark);
 }
 
 /* ===== Main Content ===== */
@@ -211,7 +211,7 @@ main p {
 }
 
 .landing-buttons button:hover {
-  background: var(--accent);
+  background: var(--accent-dark);
   color: white;
 }
 
